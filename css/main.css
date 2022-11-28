@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark:#070707;
+    --sizeindex: calc(1vw + 1vh);
+    --transition: 0.3s cubic-bezier(.2,.6,0,1);
+}
+@font-face {
+    font-family: raleway_m;
+    src: url(../fonts/raleway-v22-cyrillic-300.woff2);
+    font-weight: 300;
+}
+@font-face {
+    font-family: raleway_m;
+    src: url(../fonts/raleway-v22-cyrillic-900.woff2);
+    font-weight: 900;
+}
+body, html {
+    width: 100%;
+    height: 150%;
+    background-color: var(--dark);
+    color: #FFF;
+    font-family: raleway_m, sans-serif;
+    overflow: hidden;
+    line-height: 1.8;
+    font-size: calc(var(--sizeindex) * 2);
+}
+.slider {
+    height: 100%;
+    left: -10%;
+    transform: rotate(15deg);
+    overflow: visible;
+    top: 30vh;
+}
+.slider__wrapper {
+    transition: var(--transition)!important;
+}
+.slider__item {
+    max-width: 1000vh;
+}
+.slider__img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    position: absolute;
+    top: -10vh;
+}
